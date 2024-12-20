@@ -2,7 +2,7 @@ import { sqlite3, OPEN_READWRITE, Database } from "sqlite3";
 import { open } from "sqlite";
 
 
-
+//Supprime une task en se servant de son id
 export async function DELETE(req: Request, res: Response) {
     const db = await open("./db.sqlite");
     const id = req.url.split("/").pop();

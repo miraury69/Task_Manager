@@ -3,15 +3,12 @@ import { open } from "sqlite";
 import { error } from "console";
 
 
-
+//Créée une nouvelle tâche
 export async function POST(req: Request, res: Response) {
-    try {
-           console.log('1') 
-        const db = await open("./db.sqlite");
-        console.log('2') 
+    try { 
+        const db = await open("./db.sqlite"); 
 
         if (req.method !== "POST") {
-        console.log('3') 
 
             throw error;
         }
@@ -19,7 +16,6 @@ export async function POST(req: Request, res: Response) {
         console.log(name, description)
     
         if (!name || !description) {
-        console.log('4') 
 
             throw error;
         }
@@ -30,7 +26,6 @@ export async function POST(req: Request, res: Response) {
         }
     
         const task = await db.exec(`INSERT INTO task(name, description) VALUES ("${name}", "${description}")`);
-        console.log('5') 
     
         return Response.json(task);
     } catch (error) {

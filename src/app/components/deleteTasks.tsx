@@ -7,6 +7,7 @@ interface DeleteTaskProps {
   onTaskDeleted: (id: string) => void;
 }
 
+//appelle la queri Delete task
 const DeleteTask: React.FC<DeleteTaskProps> = ({ id, onTaskDeleted }) => {
   const handleDelete = async () => {
     try {

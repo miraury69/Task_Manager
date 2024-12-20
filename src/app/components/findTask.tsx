@@ -7,6 +7,7 @@ interface FindTaskProps {
   id: string;
 }
 
+//Permet d'afficher les détails d'une tâche
 const FindTask: React.FC<FindTaskProps> = ({ id }) => {
   const [tasks, setTasks] = useState<tasks[]>([]);
 

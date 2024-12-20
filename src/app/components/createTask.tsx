@@ -6,6 +6,7 @@ interface CreateTaskProps {
   onTaskCreated: () => void;
 }
 
+//appelle la queri create
 const CreateTask: React.FC<CreateTaskProps> = ({ onTaskCreated }) => {
   const [name, setName] = useState<string>("");
   const [description, setDescription] = useState<string>("");

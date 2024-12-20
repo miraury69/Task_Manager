@@ -2,7 +2,7 @@ import { sqlite3, OPEN_READWRITE, Database } from "sqlite3";
 import { open } from "sqlite";
 
 
-
+//Permet de récupérer toutes les taches dans la db
 export async function GET(req: Request, res: Response) {
     const db = await open("./db.sqlite");
     const id = req.url.split("/").pop();

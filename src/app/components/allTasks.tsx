@@ -5,6 +5,7 @@ import { tasks } from "./interfaces";
 import DeleteTask from "./deleteTasks";
 import CreateTask from "./createTask";
 
+//Affiche toutes les taches et import delete et create task
 const AllTasks = () => {
   const [tasks, setTasks] = useState<tasks[]>([]);
 
